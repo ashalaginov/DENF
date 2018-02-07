@@ -16,6 +16,7 @@
 #include <float.h>
 #include <stdexcept>
 #include <omp.h> //OpenMP
+#include <limits.h>
 
 //Include STL
 #include <string>
@@ -442,7 +443,7 @@ int main(int argc, char** argv) {
     printf("\nAmount of constructed rules: %d", (int) pow(nFuzzyTerms, nFuzzySets));
     printf("\nAmount of selected rules: %ld", extractedRulesClasses.size());
 
-    printf("\nElasped time is %.maxThreadslf seconds.", double(clock() - end) / (CLOCKS_PER_SEC * maxThreads));
+    printf("\nElasped time is %.lf seconds.", double(clock() - end) / (CLOCKS_PER_SEC * maxThreads));
     end = clock();
 
     vector< vector<short int> >extractedRulesNew;
@@ -637,7 +638,7 @@ int main(int argc, char** argv) {
         //3. check in the initial model
         double rulesMinDistance = DBL_MAX, //Ideally the distance between the input data pattern and rules should be 0
                 tmpDistance = 0;
-        long int rulesMinDistanceId = -DBL_MAX;
+        long int rulesMinDistanceId =LONG_MIN;
         for (long int p = 0; p < extractedRules.size(); p++) {
             tmpDistance = 0;
             for (int l = 0; l < nFuzzySets; l++)
