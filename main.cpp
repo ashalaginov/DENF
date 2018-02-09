@@ -4,7 +4,7 @@
  * \brief: Also Dynamic Expansion Neuro-Fuzzy (DENF) by adding a single term in the first fuzzy set, so 4 terms in the first one. 
  * \brief: Then re-training and check for accuracy.
  * \brief: Fuzzification into 2, 3 5 and 7 predefined terms in each of the fuzzy sets
- * \author Andrey Shalaginov <andrii.shalaginov@hig.no>
+ * \author Andrey Shalaginov <andrii.shalaginov@gmail.com>
  * Created on September 25, 2014, 12:45 AM
  */
 
