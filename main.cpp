@@ -15,8 +15,9 @@
 #include <math.h>
 #include <float.h>
 #include <stdexcept>
-#include <omp.h> //OpenMP
 #include <limits.h>
+
+#include <omp.h> //OpenMP
 
 //Include STL
 #include <string>
@@ -27,16 +28,17 @@
 
 #define nDataSamples  604 //Size of the input data set
 
-//Fuzzy logic constants
+//Fuzzy Logic constants
 #define nFuzzySets 6 // Equal to number of features on the input
 #define nFuzzyTerms 3 //Can be 2, 3, 5 or 7
 #define numerSelectedRules 10 //Number of rules to be selected out of all constructed
 #define numerSelectedRulesDelta 10 //Number of rules to be selected out of all newly constructed
 
-//ANN Terms
+//ANN learning constants
 #define learningRateAlpha 0.1 //Learning rate in the Artificial Neural network
 #define nEpochs 100 //Number of epochs to train ANN
 
+//Misc constants
 #define maxThreads 8
 
 using namespace std;
